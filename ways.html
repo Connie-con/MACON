@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<style>
+
+.header-bar {
+    background-color: #0d86c2; /* Light background for the header */
+    padding: 5px 10px; /* Reduced padding around the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header-bar nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.header-bar nav a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Reduced padding around the links */
+    font-weight: 700; /* Bold font for emphasis */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-bar nav a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Additional styles for the logo and search container */
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and search */
+    align-items: center; /* Center items vertically */
+    padding: 5px 10px; /* Reduced padding around the header */
+}
+
+.logo {
+    display: flex; /* Use flexbox for logo layout */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 40px; /* Reduced logo height */
+    margin-right: 5px; /* Reduced space between logo image and text */
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex; /* Use flexbox for nav links */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-link {
+    color: #0a0a0a; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Reduced space between links */
+    font-size: 0.9em; /* Decreased font size */
+    padding: 5px 10px; /* Reduced padding for a smaller clickable area */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    color: #998484; /* Keep text color white on hover */
+}
+
+.back-button a {
+    font-size: 1.2em; /* Decreased size of back button */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button a:hover {
+    color: #f8f9fa; /* Change color on hover */
+}
+
+/* Back Button Styling */
+.back-button {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 10px; /* Reduced margin for spacing */
+}
+
+.back-button a.home-icon {
+    font-size: 1.5em; /* Reduced size of the home icon */
+    color: black; /* Black color for the home icon */
+    text-decoration: none; /* Remove underline */
+    margin-right: 5px; /* Reduced space between home icon and arrow */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button a.home-icon:hover {
+    color: gray; /* Change color on hover */
+}
+
+.back-button i.bi-arrow-left-square {
+    font-size: 1.5em; /* Reduced size of the arrow icon */
+    color: black; /* Black color for the arrow icon */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.back-button i.bi-arrow-left-square:hover {
+    color: gray; /* Change color on hover */
+}
+
+/*STIKYBAR*/
+/* Sticky Navbar Styling */
+.sticky-top {
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1030; /* Ensure it appears above other content */
+}
+
+.container-fluid.bg-light {
+    background-color: #f8f9fa; /* Light background color */
+    /* Border color */
+}
+
+
+/* Optional: Add a shadow effect when sticky */
+
+
+/* Reset some default styles */
+body, h1, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Add padding */
+}
+
+.logo img {
+    max-width: 200px; /* Adjust logo size as needed (increase size) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.container-fluid {
+    background-color: #f8f8f8; /* Light background color */
+   /* Top border */
+    padding: 20px 0; /* Vertical padding */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjust heading size */
+    color: #4CAF50; /* Green color for the heading */
+}
+
+.text-center {
+    text-align: center; /* Center text */
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    background: #e2e2e2;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    section {
+        flex: 3; /* Main content takes more space */
+    }
+
+    aside {
+        flex: 1; /* Sidebar takes less space */
+        margin-left: 20px;
+    }
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #808080; /* Changed to gray */
+}
+.footer-logo {
+    margin-bottom: 15px;
+}
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+.footer h1 {
+    font-size: 24px; /* Increased font size for the heading */
+    margin: 5px 0 15px;
+    color: red; /* Ensuring the color is set here */
+}
+.footer p {
+    margin: 5px 0;
+    color: #272727; /* Changed text color to white for visibility */
+    font-size: 16px; /* Increased font size for paragraphs */
+}
+.footer a {
+    color: #ffcc00; /* Changed link color to a bright yellow for better contrast */
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline; /* Added underline on hover for links */
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    width: 40px; /* Adjusted width */
+    height: 40px; /* Adjusted height */
+    line-height: 40px; /* Adjusted line-height */
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.social-icons a:hover {
+    background-color: #666; /* Darker background on hover */
+}
+
+</style>
+
+
+<body>
+ <!-- Bottom Navigation Bar -->
+<div class="container-fluid bg-dark text-light border-top py-3 sticky-top"> <!-- Changed background color to dark -->
+    <div class="row justify-content-center"> <!-- Center the items in the row -->
+        <div class="col-auto text-center"> <!-- Centering the content -->
+            <div class="nav-links d-flex align-items-center justify-content-center"> <!-- Flex container for nav links -->
+                <div class="back-button me-3"> <!-- Added margin to the right -->
+                    <a href="index.html" class="text-light">
+                        <i class="bi bi-arrow-left-square"></i> <!-- Bootstrap Arrow Icon -->
+                    </a>
+                </div>
+               
+                <a href="whatwedo.html" class="nav-link mx-3">What We Do</a>
+                <a href="whoweare.html" class="nav-link mx-3">Who We Are</a>
+                <a href="browse.html" class="nav-link mx-3">Browse Gift Catalog</a>
+                <a href="monthly.html" class="nav-link mx-3">Monthly Support</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="header">
+        <div class="logo">
+            <img src="Preview__2_-removebg-preview (1).png" alt="Save the Children Logo">
+        </div>
+    </div>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Website</h2>
+            <img src="data:image/jpeg;base64,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" alt="Description of the image" style="max-width: 100%; height: auto; border-radius: 5px;">
+            <p>We are thrilled to have you here! Our website is dedicated to making a positive impact in the lives of stray dogs through rescue, rehabilitation, and adoption. We believe that every dog deserves a loving home and the care they need to thrive. Explore our various services, learn more about our mission, and discover how you can get involved in our efforts to promote animal welfare in our community. Join us in our journey to create a brighter future for these deserving animals, and together, let’s make a difference!
+            </ul>
+        </section>
+    
+
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At our nonprofit organization, we are dedicated to rescuing and rehabilitating stray dogs in need of loving homes. Our mission is to provide essential medical care, nutrition, and shelter to abandoned and neglected animals, ensuring they receive the love and support they deserve. We believe in advocating for animal welfare and promoting responsible pet ownership within our community. Through educational programs and outreach initiatives, we aim to raise awareness about the importance of spaying and neutering to reduce the stray population. Together, we strive to create a compassionate world where every stray dog has a chance at a happy and fulfilling life.
+
+
+                Share</p>
+        </section>
+    
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>
+                    <h3>Adopt a Dog</h3>
+                    <p>Browse our available dogs and learn more about our adoption process.</p>
+                </li>
+                <li>
+                    <h3>Donate</h3>
+                    <p>Make a secure online donation to support our mission and help us continue to care for stray dogs in need.</p>
+                </li>
+                <li>
+                    <h3>Volunteer</h3>
+                    <p>Find out how you can get involved and volunteer with our organization to make a difference in the lives of stray dogs.</p>
+                </li>
+                <li>
+                    <h3>Report a Stray</h3>
+                    <p>If you've found a stray dog, report it to us and we'll do our best to help reunite it with its owner or find it a new home.</p>
+                </li>
+            </ul>
+        </section>
+    
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+
+    <center><div class="footer">
+        <div class="footer-logo">
+            <img src="Preview__2_-removebg-preview (1).png" alt="Pawssion Project Logo">
+        </div>
+        <h1 style="color: red;">Hope for Paws and Claws</h1>
+        <p><strong>Magsingal Shelter:</strong> 1429 Paradise 1, Purok 7 Tungkong Mangga, SJDM, Bulacan</p>
+        <p><strong>BMagsingal Shelter:</strong> Balay Pawssion, Google Maps: M2JV+5W, Bacolod, Negros Occidental</p>
+        <p><a href="mailto:info@pawssionproject.org">info@pawssionproject.org</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/your-page-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/your-page-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://www.youtube.com/your-channel-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="40" height="40">
+            </a>
+        </div>
+    </div>
+</center>
+    
+    
+    <footer>
+        <p>&copy; 2023 paws and claws. All rights reserved.</p>
+        <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

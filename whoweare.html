@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Paws & Claws Rescue</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href=""> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <style>
+
+/* Navbar Styling */
+.header-bar {
+    background-color: #f8f9fa; /* Light background for the header */
+    padding: 10px 20px; /* Padding around the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header-bar nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.header-bar nav a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Padding around the links */
+    font-weight: 700; /* Bold font for emphasis */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-bar nav a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Additional styles for the logo and search container */
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and search */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding around the header */
+}
+
+.logo {
+    display: flex; /* Use flexbox for logo layout */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height */
+    margin-right: 10px; /* Space between logo image and text */
+}
+
+
+
+/* Navbar Links */
+.nav-links {
+    display: flex; /* Use flexbox for nav links */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-link {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Space between links */
+    font-size: 1.2em; /* Increase font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+
+/* HOMEBUTTON */
+/* Back Button Styling */
+.back-button {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 20px; /* Add margin for spacing */
+}
+
+.back-button a.home-icon {
+    font-size: 2em; /* Increase size of the home icon */
+    color: black; /* Black color for the home icon */
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Space between home icon and arrow */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button a.home-icon:hover {
+    color: gray; /* Change color on hover */
+}
+
+.back-button i.bi-arrow-left-square {
+    font-size: 2em; /* Size of the arrow icon */
+    color: black; /* Black color for the arrow icon */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.back-button i.bi-arrow-left-square:hover {
+    color: gray; /* Change color on hover */
+}
+
+/*STIKYBAR*/
+/* Sticky Navbar Styling */
+.sticky-top {
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1030; /* Ensure it appears above other content */
+}
+
+.container-fluid.bg-light {
+    background-color: #f8f9fa; /* Light background color */
+    border-top: 1px solid #dee2e6; /* Border color */
+}
+
+.nav-links {
+    padding: 10px 0; /* Add some padding to the nav links */
+}
+
+/* Optional: Add a shadow effect when sticky */
+.sticky-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Reset some default styles */
+body, h1, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Add padding */
+}
+
+.logo img {
+    max-width: 200px; /* Adjust logo size as needed (increase size) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.container-fluid {
+    background-color: #f8f8f8; /* Light background color */
+   /* Top border */
+    padding: 20px 0; /* Vertical padding */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjust heading size */
+    color: #4CAF50; /* Green color for the heading */
+}
+
+.text-center {
+    text-align: center; /* Center text */
+}
+
+
+
+/*our mission*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 40px); /* Adjusts the width of the columns */
+    text-align: center;
+    transition: transform 0.2s;
+}
+.service-container:hover {
+    transform: scale(1.05);
+}
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.service-title {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #2980b9;
+}
+.service-description {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+@media (max-width: 768px) {
+    .service-container {
+        flex: 1 1 calc(45% - 40px); /* Adjust for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .service-container {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
+
+/* our vision mision*/
+#mission-vision {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+  
+.qontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.mission, .vision {
+    flex: 1;
+    margin: 20px;
+    background-color: #0f3646;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.mission h2, .vision h2 {
+    font-size: 24px;
+    color: #f0eded;
+    margin-bottom: 15px;
+}
+  
+.mission p, .vision p {
+    font-size: 16px;
+    color: #f0ecec;
+    line-height: 1.6;
+}
+  
+@media (max-width: 768px) {
+    .qontainer {
+        flex-direction: column;
+    }
+}
+
+/*VALUE*/
+#values {
+    padding: 30px;
+}
+
+.values-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into the next row */
+    justify-content: center; /* Center the grid items */
+    gap: 20px; /* Space between items */
+}
+
+.value-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background: #fff; /* Optional: background color */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+    padding: 15px; /* Padding around the content */
+    width: 300px; /* Set a fixed width for each item */
+}
+
+.value-image {
+    width: 150px; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.value-text {
+    flex: 1; /* Allow the text to take the remaining space */
+}
+
+h3 {
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    margin: 5px 0 0; /* Margin for the paragraph */
+}
+
+
+/*STORY*/
+/* General Section Styling */
+.promo-section {
+    background-color: #b0c4ce; /* Matches the light blue background */
+    color: #000; /* Black text */
+    text-align: left;
+    padding: 3rem; /* Adds spacing around the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full screen height */
+}
+
+/* Content Styling */
+.promo-content {
+    max-width: 600px; /* Limits content width */
+}
+
+.promo-content h1 {
+    font-size: 3rem; /* Large title font */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.shop-btn {
+    background-color: #19b93b; /* Black button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.shop-btn:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+h1 {
+            text-align: center; /* Centers the text */
+            color: #2c3e50; /* Darker color for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        #team {
+            text-align: center; /* Center the section text */
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-around; /* Space members evenly */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            margin: 20px 0; /* Margin around the container */
+        }
+
+        .team-member {
+            text-align: center; /* Center text below images */
+            margin: 15px; /* Margin around each team member */
+            width: 200px; /* Set a fixed width for team member cards */
+        }
+
+        .team-image {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make images circular */
+        }
+
+
+        /*contact*/
+
+        .sectionl {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray background for the contact section */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #b0c4de;
+  /* Subtle shadow */
+}
+
+.sectionl h1 {
+    font-size: 2.5em;
+    color: #333; /* Darker text for title */
+}
+
+.sectionl p {
+    font-size: 1.2em;
+    color: #666; /* Dark gray text for description */
+    margin-bottom: 20px;
+}
+
+.sectionl .contact-button {
+    background-color: #0a962d; /* Bootstrap primary blue */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.sectionl .contact-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+    </style>
+
+
+<!--LOGO-->
+<!-- Back Button -->
+<!-- Back Button with Home Icon (HTML Entity) -->
+
+
+<!--LOGO-->
+<div class="header">
+    <div class="logo">
+        <img src="Preview__2_-removebg-preview (1).png" alt="Save the Children Logo">
+    </div>
+</div>
+<!--bottom bar-->  
+<div class="container-fluid bg-light border-top py-3 sticky-top"> <!-- Add 'sticky-top' class -->
+    <div class="row justify-content-center"> <!-- Center the items in the row -->
+        <div class="col-auto text-center"> <!-- Added text-center class for centering -->
+            <!--bottom bar-->  
+            <div class="container-fluid bg-light border-top py-3">
+                <div class="row justify-content-center"> <!-- Center the items in the row -->
+                    <div class="col-auto">
+                        <div class="nav-links d-flex align-items-center justify-content-center"> <!-- Flex container for nav links -->
+                            <div class="back-button">
+                                <a href="index.html">
+                                    <i class="bi bi-arrow-left-square"></i> <!-- Bootstrap Arrow Icon -->
+                                </a>
+                            </div>
+                           
+                            <a href="whatwedo.html" class="nav-link d-inline fs-5 mx-4">What We Do </a> <!-- Increased font size and margin -->
+                            <a href="ways.html" class="nav-link d-inline fs-5 mx-4">Ways to Help </a> <!-- Increased font size and margin -->
+                            <a href="browse.html" class="nav-link d-inline fs-5 mx-4">Browse Gift Catalog </a> <!-- Increased font size and margin -->
+                            <a href="monthly.html" class="nav-link d-inline fs-5 mx-4">Monthly Support </a> <!-- Increased font size and margin -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<BR></BR>
+
+<div class="text-center"> <!-- Use a div with a class for centering -->
+    <h1>WHO WE ARE</h1>
+    <p>WE ARE THE HOPE FOR PAWS AND CLAWS, a dedicated organization committed to rescuing and rehabilitating stray dogs in our community. Our mission is to provide safe shelter, medical care, and loving homes for these animals in need. Through our various initiatives, we aim to raise awareness about the importance of responsible pet ownership, promote spaying and neutering to prevent overpopulation, and advocate for the rights of stray animals. Together, we strive to create a compassionate environment where every dog is treated with kindness and has the opportunity for a better life.</p>
+</div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <main>
+        <!--   MISSION Section -->
+    <zextion id="mission-vision">
+        <div class="qontainer">
+            <div class="mission">
+                <h2>Mission</h2>
+                <p>We are dedicated to rescuing and rehabilitating stray dogs, working to provide them with safe shelter, medical care, and loving homes. Our mission is to reduce the stray dog population through spaying and neutering initiatives, and to create positive change in our communities by promoting responsible pet ownership and animal welfare. We believe in compassion, advocacy, and community engagement to improve the lives of stray dogs.</p>
+            </div>
+            <div class="vision">
+                <h2>Vision</h2>
+                <p>Our vision is to build a world where every stray dog is treated with kindness and has access to the care they need, where no dog is left to suffer on the streets. We envision a future where stray dogs are embraced as valued members of our communities, and we strive to make this a reality through education, outreach programs, and partnerships with local shelters and veterinary services.</p>
+            </div>
+        </div>
+    </zextion>
+
+        <!--VALUES-->
+        <section id="values">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6kXPic-FtInLiSybnt7BKayGpaeWtchSeg&s" alt="Compassion" class="value-image">
+                    <div class="value-text">
+                        <h3>Compassion</h3>
+                        <p>We believe in treating all animals with kindness and empathy.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <img src="data:image/jpeg;base64,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" alt="Integrity" class="value-image">
+                    <div class="value-text">
+                        <h3>Integrity</h3>
+                        <p>We operate with transparency and honesty in all our endeavors.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7FhcgtTO2S9Uc4eu-S2DNIPNvWLqA5RAyA&s" alt="Community" class="value-image">
+                    <div class="value-text">
+                        <h3>Community</h3>
+                        <p>We work together with local communities to create a better environment for stray animals.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlH1zGr836g7ihVxs1OR01JoiDRvcQUHgy0w&s" alt="Advocacy" class="value-image">
+                    <div class="value-text">
+                        <h3>Advocacy</h3>
+                        <p>We advocate for the rights of animals and promote spaying and neutering to prevent overpopulation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+       <!--STORY-->
+
+       <section class="promo-section">
+        <div class="promo-content">
+            <h1>Our Story</h1>
+            <section id="donate">
+                
+                <p>At Paws & Claws Rescue, we are dedicated to transforming the lives of stray animals by providing them with safe shelter, essential medical care, and the love they deserve. Our compassionate team works tirelessly to rehabilitate these vulnerable animals, ensuring they receive the attention and support needed to heal from their past traumas. Through our adoption programs, we strive to find them loving forever homes, where they can thrive and be cherished members of a family. Additionally, we actively engage in community outreach and education, raising awareness about the importance of responsible pet ownership, spaying, and neutering to prevent overpopulation. Together, we are committed to creating a brighter future for stray animals, advocating for their rights, and fostering a compassionate community where every animal is treated with kindness and respect
+                    his version elaborates on the various aspects of your organization's work, including rehabilitation, community engagement, and advocacy, creating a more comprehensive narrative about your mission with stray animals. Feel free to modify it further to align with your organization's specific goals and messaging!
+                </p>
+               <center><a href="https://www.yourdonationlink.com" class="shop-btn">Donate</a></center>
+            </section>
+           
+        </div>
+    </section>
+    
+<!--team-->
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuPAfvyv6L0y3nEh2cdBc-ZmpWnz5yZ8Wb9g&s" alt ="Jane Doe" class="team-image">
+                <h3>Rescue and Rehabilitation Team</h3>
+                <p>Roles: This team is responsible for the direct rescue of stray dogs, providing medical care, rehabilitation, and fostering. It may include animal control officers, veterinarians, vet technicians, and foster coordinators.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfVPsjA93lXxPT7gHn_OaCCMj98jFt8qJuXA&s" alt="John Smith" class="team-image">
+                <h3>Volunteer Coordination Team</h3>
+                <p>This team manages the recruitment, training, and coordination of volunteers who assist with various tasks within the organization. It typically includes a Volunteer Coordinator and volunteer trainers.</p>
+            </div>
+            <div class="team-member">
+                <img src="data:image/jpeg;base64,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" alt="Emily Johnson" class="team-image">
+                <h3>Community Outreach and Education Team</h3>
+                <p>This team focuses on raising awareness about stray dog issues, responsible pet ownership, and the organization's mission. It may include outreach coordinators, educators, and social media managers</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="sectionl">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out with any questions or inquiries.</p>
+        <a href="mailto:contact@example.com" class="contact-button">Get in Touch</a>
+    </div>  
+       
+
+    <center><div class="footer">
+        <div class="footer-logo">
+            <img src="Preview__2_-removebg-preview (1).png" alt="Pawssion Project Logo">
+        </div>
+        <h1 style="color: red;">Hope for Paws and Claws</h1>
+        <p><strong>Magsingal Shelter:</strong> 1429 Paradise 1, Purok 7 Tungkong Mangga, SJDM, Bulacan</p>
+        <p><strong>BMagsingal Shelter:</strong> Balay Pawssion, Google Maps: M2JV+5W, Bacolod, Negros Occidental</p>
+        <p><a href="mailto:info@pawssionproject.org">info@pawssionproject.org</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/your-page-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/your-page-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://www.youtube.com/your-channel-name" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="40" height="40">
+            </a>
+        </div>
+    </div>
+</center>
+    <footer>
+        <p>&copy; 2023 Paws & Claws Rescue. All rights reserved.</p>
+    </footer>
+</body>
+</html>
